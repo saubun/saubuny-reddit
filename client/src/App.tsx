@@ -12,15 +12,18 @@ export default function App() {
 			style={
 				isDark
 					? {
-							backgroundColor: '#4c566a',
+							backgroundColor: '#2e3440',
 					  }
 					: {
 							backgroundColor: '#eceff4',
 					  }
 			}
 		>
-			<Container className="rounded mt-4">
-				<NavbarTop isDark={isDark} setDark={setDark} />
+			<NavbarTop isDark={isDark} setDark={setDark} />
+			<Container
+				className="rounded mt-4 d-flex justify-content-center"
+				style={{ height: '100vh' }}
+			>
 				<PostsList />
 			</Container>
 		</div>

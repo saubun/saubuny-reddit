@@ -89,11 +89,7 @@ export default function PostsList() {
 						))
 				) : (
 					<div style={divStyling}>
-						<Spinner
-							animation="border"
-							variant="primary"
-							className="d-flex justify-content-center"
-						></Spinner>
+						<Spinner animation="border" variant="primary"></Spinner>
 					</div>
 				)}
 			</ListGroup>

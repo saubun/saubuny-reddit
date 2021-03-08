@@ -11,37 +11,41 @@ export default function NavbarTop({ isDark, setDark }: darkProps) {
 			style={
 				isDark
 					? {
-							backgroundColor: '#4c566a',
+							backgroundColor: '#434c5e',
 					  }
 					: {
-							backgroundColor: '#eceff4',
+							backgroundColor: '#fff',
 					  }
 			}
 			id="nav"
+			className="shadow-sm"
+			variant={isDark ? 'dark' : 'light'}
 		>
 			<Navbar.Brand href="#home">Saubuny Reddit</Navbar.Brand>
 			<Navbar.Toggle aria-controls="basic-navbar-nav" />
-			<Nav className="mr-auto">
-				<Nav.Link href="#home">Home</Nav.Link>
-				<Nav.Link href="#posts">View Posts</Nav.Link>
-			</Nav>
-			<Button
-				variant={isDark ? 'outline-light' : 'outline-dark'}
-				style={
-					isDark
-						? {
-								backgroundColor: '#4c566a',
-								color: '#eceff4',
-						  }
-						: {
-								backgroundColor: '#eceff4',
-								color: '#4c566a',
-						  }
-				}
-				onClick={changeTheme}
-			>
-				Change Theme
-			</Button>
+			<Navbar.Collapse>
+				<Nav className="mr-auto">
+					<Nav.Link href="#home">Home</Nav.Link>
+					<Nav.Link href="#posts">View Posts</Nav.Link>
+				</Nav>
+				<Button
+					variant={isDark ? 'outline-light' : 'outline-dark'}
+					style={
+						isDark
+							? {
+									backgroundColor: '#4c566a',
+									color: '#eceff4',
+							  }
+							: {
+									backgroundColor: '#eceff4',
+									color: '#4c566a',
+							  }
+					}
+					onClick={changeTheme}
+				>
+					Change Theme
+				</Button>
+			</Navbar.Collapse>
 		</Navbar>
 	);
 }
