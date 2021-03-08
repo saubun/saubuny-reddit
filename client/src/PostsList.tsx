@@ -60,7 +60,7 @@ export default function PostsList() {
 										<video
 											controls
 											src={item.media.reddit_video.fallback_url}
-											style={{ width: '30%', height: 'auto' }}
+											style={{ height: '30%', width: 'auto' }}
 											className="border"
 										></video>
 									) : item.url_overridden_by_dest ? (
