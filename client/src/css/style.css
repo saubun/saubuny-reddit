@@ -128,7 +128,7 @@ h4 {
 
 .reddit-media {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 }
 
 .reddit-image,
