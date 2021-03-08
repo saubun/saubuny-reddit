@@ -7,7 +7,8 @@ export default function NavbarTop({ isDark, setDark }: darkProps) {
 	return (
 		<Navbar
 			fixed="top"
-			expand="lg"
+			collapseOnSelect
+			expand="xl"
 			style={
 				isDark
 					? {
@@ -22,8 +23,8 @@ export default function NavbarTop({ isDark, setDark }: darkProps) {
 			variant={isDark ? 'dark' : 'light'}
 		>
 			<Navbar.Brand href="#home">Saubuny Reddit</Navbar.Brand>
-			<Navbar.Toggle aria-controls="basic-navbar-nav" />
-			<Navbar.Collapse>
+			<Navbar.Toggle aria-controls="responsive-navbar-nav" />
+			<Navbar.Collapse id="responsive-navbar-nav">
 				<Nav className="mr-auto">
 					<Nav.Link href="#home">Home</Nav.Link>
 					<Nav.Link href="#posts">View Posts</Nav.Link>
