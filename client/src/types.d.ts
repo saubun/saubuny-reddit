@@ -15,3 +15,8 @@ type mediaObject = {
 type redditVideoObject = {
 	fallback_url: string;
 };
+
+type darkProps = {
+	isDark: boolean;
+	setDark: (x: boolean) => void;
+};

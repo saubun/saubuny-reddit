@@ -22,10 +22,18 @@ export default function PostsList() {
 			console.error(err);
 		});
 
+	const divStyling = {
+		width: '100%',
+		height: 'auto',
+		display: 'flex',
+		justifyContent: 'center',
+		alignItems: 'center',
+	};
+
 	// Extremely messy return
 	return (
 		<>
-			<ListGroup>
+			<ListGroup className="mt-5">
 				{posts && posts.length > 0 ? (
 					posts
 						.filter((item: redditPost) => item.distinguished === null)
@@ -80,15 +88,7 @@ export default function PostsList() {
 							</ListGroup.Item>
 						))
 				) : (
-					<div
-						style={{
-							width: '100%',
-							height: 'auto',
-							display: 'flex',
-							justifyContent: 'center',
-							alignItems: 'center',
-						}}
-					>
+					<div style={divStyling}>
 						<Spinner
 							animation="border"
 							variant="primary"

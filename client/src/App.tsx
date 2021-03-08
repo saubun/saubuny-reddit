@@ -1,12 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container } from 'react-bootstrap';
+import NavbarTop from './Navbar';
 import PostsList from './PostsList';
 
 export default function App() {
+	const [isDark, setDark] = useState(false);
+
 	return (
-		<Container className="rounded">
-			<h1 className="text-center my-4">Saubuny Reddit</h1>
-			<PostsList />
-		</Container>
+		<div
+			className="d-flex flex-row"
+			style={
+				isDark
+					? {
+							backgroundColor: '#4c566a',
+					  }
+					: {
+							backgroundColor: '#eceff4',
+					  }
+			}
+		>
+			<Container className="rounded mt-4">
+				<NavbarTop isDark={isDark} setDark={setDark} />
+				<PostsList />
+			</Container>
+		</div>
 	);
 }
