@@ -106,6 +106,26 @@ h4 {
 	height: auto;
 	display: flex;
 	justify-content: center;
+	flex-direction: column;
+}
+
+.ul .media-li {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 1rem;
+}
+
+.dark-border {
+	border: 3px solid #3b4252;
+}
+
+.light-border {
+	border: 3px solid #fff;
+}
+
+li {
+	list-style: none;
 }
 
 .ul-dark {
@@ -129,12 +149,15 @@ h4 {
 .reddit-media {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .reddit-image,
 .reddit-video {
 	width: 80%;
 	height: auto;
+	margin: 1rem;
 }
 
 @-moz-keyframes spin {

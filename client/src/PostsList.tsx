@@ -29,22 +29,18 @@ export default function PostsList({ isDark, setDark }: darkProps) {
 					posts
 						.filter((item: redditPost) => item.distinguished === null)
 						.map((item: redditPost) => (
-							<li key={item.id}>
-								{/* Display title */}
-								<nav>
-									<a
-										href={
-											item.media?.reddit_video.fallback_url ||
-											item.url_overridden_by_dest
-										}
-										className={isDark ? 'text-light' : 'text-dark'}
-									>
-										<h3>{item.title}</h3>
-									</a>
-								</nav>
-
-								{/* Display video or image */}
+							<li
+								key={item.id}
+								className={
+									(isDark ? 'dark-border' : 'light-border') + ' media-li'
+								}
+							>
 								<div className="reddit-media">
+									<h3 className={isDark ? 'text-light' : 'text-dark'}>
+										{item.title}
+									</h3>
+
+									{/* Display video or image */}
 									{item.media?.reddit_video.fallback_url ? (
 										<video
 											controls
@@ -62,6 +58,17 @@ export default function PostsList({ isDark, setDark }: darkProps) {
 									) : null}
 
 									<ul>
+										<li>
+											<a
+												href={
+													item.media?.reddit_video.fallback_url ||
+													item.url_overridden_by_dest
+												}
+												className={isDark ? 'text-light' : 'text-dark'}
+											>
+												View Content
+											</a>
+										</li>
 										<li>
 											{/* Display comments */}
 											<p className={isDark ? 'text-light' : 'text-dark'}>
