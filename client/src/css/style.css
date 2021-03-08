@@ -62,12 +62,12 @@ h4 {
 }
 
 .link-light {
-	color: #d8dee9;
+	color: var(--light1);
 	margin: 1rem;
 }
 
 .link-dark {
-	color: #4c566a;
+	color: var(--dark3);
 	margin: 1rem;
 }
 
@@ -83,7 +83,7 @@ h4 {
 }
 
 .navbar-dark {
-	background-color: #3b4252;
+	background-color: var(--dark2);
 }
 
 .navbar-light {
@@ -97,7 +97,7 @@ h4 {
 	margin: 1rem;
 	height: 60px;
 	width: 60px;
-	background: #3b4252;
+	background: var(--dark2);
 	border-radius: 1rem;
 	-webkit-animation: spin 4s linear infinite;
 	-moz-animation: spin 4s linear infinite;
@@ -121,7 +121,7 @@ h4 {
 .loading-div-dark-2 {
 	height: 20px;
 	width: 20px;
-	background: #3b4252;
+	background: var(--dark2);
 	border-radius: 1rem;
 }
 
@@ -154,11 +154,11 @@ h4 {
 }
 
 .media-li-dark {
-	border: 3px solid #3b4252;
+	border: 3px solid var(--dark2);
 }
 
 .media-li-light {
-	border: 3px solid #fff;
+	border: 3px solid var(--light1);
 }
 
 .media-info {
@@ -185,11 +185,11 @@ h4 {
 }
 
 .ul-dark {
-	background-color: #2e3440;
+	background-color: var(--dark1);
 }
 
 .ul-light {
-	background-color: #eceff4;
+	background-color: #fff;
 }
 
 .reddit-media {

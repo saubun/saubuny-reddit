@@ -26,9 +26,7 @@ export default function NavbarTop({ isDark, setDark }: darkProps) {
 				<button
 					className={(isDark ? 'button-light' : 'button-dark') + ' navbar-btn'}
 					onClick={changeTheme}
-				>
-					Change Theme
-				</button>
+				></button>
 			</div>
 		</>
 	);
