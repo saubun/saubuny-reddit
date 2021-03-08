@@ -37,30 +37,26 @@ export default function PostsList({ isDark, setDark }: darkProps) {
 											item.media?.reddit_video.fallback_url ||
 											item.url_overridden_by_dest
 										}
-										style={{
-											color: 'black',
-										}}
+										className={isDark ? 'text-light' : 'text-dark'}
 									>
 										<h3>{item.title}</h3>
 									</a>
 								</nav>
 
 								{/* Display video or image */}
-								<div className="d-flex flex-row">
+								<div className="reddit-media">
 									{item.media?.reddit_video.fallback_url ? (
 										<video
 											controls
 											src={item.media.reddit_video.fallback_url}
-											style={{ height: '80%', width: 'auto' }}
-											className="border"
+											className="reddit-video"
 										></video>
 									) : item.url_overridden_by_dest ? (
 										<>
 											<img
 												src={item.url_overridden_by_dest}
-												style={{ width: '80%', height: 'auto' }}
 												alt="No image provided"
-												className="border"
+												className="reddit-image"
 											/>
 										</>
 									) : null}
@@ -68,11 +64,15 @@ export default function PostsList({ isDark, setDark }: darkProps) {
 									<ul>
 										<li>
 											{/* Display comments */}
-											<p>{item.num_comments} comments</p>
+											<p className={isDark ? 'text-light' : 'text-dark'}>
+												{item.num_comments} comments
+											</p>
 										</li>
 										<li>
 											{/* Display upvotes */}
-											<p>{item.ups} upvotes</p>
+											<p className={isDark ? 'text-light' : 'text-dark'}>
+												{item.ups} upvotes
+											</p>
 										</li>
 									</ul>
 								</div>

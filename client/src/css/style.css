@@ -126,6 +126,17 @@ h4 {
 	order: 2;
 }
 
+.reddit-media {
+	display: flex;
+	flex-direction: row;
+}
+
+.reddit-image,
+.reddit-video {
+	width: 80%;
+	height: auto;
+}
+
 @-moz-keyframes spin {
 	100% {
 		-moz-transform: rotate(360deg);
