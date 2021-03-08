@@ -32,7 +32,7 @@ export default function PostsList({ isDark, setDark }: darkProps) {
 							<li
 								key={item.id}
 								className={
-									(isDark ? 'dark-border' : 'light-border') + ' media-li'
+									(isDark ? 'media-li-dark' : 'media-li-light') + ' media-li'
 								}
 							>
 								<div className="reddit-media">
@@ -57,8 +57,8 @@ export default function PostsList({ isDark, setDark }: darkProps) {
 										</>
 									) : null}
 
-									<ul>
-										<li>
+									<div className="media-info">
+										<p className="media-link">
 											<a
 												href={
 													item.media?.reddit_video.fallback_url ||
@@ -68,20 +68,20 @@ export default function PostsList({ isDark, setDark }: darkProps) {
 											>
 												View Content
 											</a>
-										</li>
-										<li>
+										</p>
+										<p className="media-comments">
 											{/* Display comments */}
 											<p className={isDark ? 'text-light' : 'text-dark'}>
 												{item.num_comments} comments
 											</p>
-										</li>
-										<li>
+										</p>
+										<p className="media-upvotes">
 											{/* Display upvotes */}
 											<p className={isDark ? 'text-light' : 'text-dark'}>
 												{item.ups} upvotes
 											</p>
-										</li>
-									</ul>
+										</p>
+									</div>
 								</div>
 							</li>
 						))

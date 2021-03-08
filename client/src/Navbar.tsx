@@ -6,7 +6,15 @@ export default function NavbarTop({ isDark, setDark }: darkProps) {
 	return (
 		<>
 			<div className={(isDark ? 'navbar-dark' : 'navbar-light') + ' navbar'}>
-				<h4 className={isDark ? 'text-light' : 'text-dark'}>Saubuny Reddit</h4>
+				<p
+					className={
+						(isDark
+							? 'text-light navbar-brand-light'
+							: 'text-dark navbar-brand-dark') + ' navbar-brand'
+					}
+				>
+					Saubuny Reddit
+				</p>
 				<nav className="navbar-nav">
 					<a className={isDark ? 'link-light' : 'link-dark'} href="#home">
 						Home
