@@ -4,7 +4,7 @@ import { ListGroup, Spinner, Nav } from 'react-bootstrap';
 
 const url: string = 'https://www.reddit.com/r/196.json';
 
-export default function Fetch() {
+export default function PostsList() {
 	const [posts, setPosts] = useState([]);
 
 	axios
