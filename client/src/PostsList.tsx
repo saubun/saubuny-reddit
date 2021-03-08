@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { ListGroup, Spinner, Nav } from 'react-bootstrap';
 
 const url: string = 'https://www.reddit.com/r/196.json';
 
-export default function PostsList() {
+export default function PostsList({ isDark, setDark }: darkProps) {
 	const [posts, setPosts] = useState([]);
 
 	axios
@@ -33,15 +32,15 @@ export default function PostsList() {
 	// Extremely messy return
 	return (
 		<>
-			<ListGroup className="mt-5">
+			<ul className={(isDark ? 'ul-dark' : 'ul-light') + ' ul'}>
 				{posts && posts.length > 0 ? (
 					posts
 						.filter((item: redditPost) => item.distinguished === null)
 						.map((item: redditPost) => (
-							<ListGroup.Item key={item.id}>
+							<li key={item.id}>
 								{/* Display title */}
-								<Nav>
-									<Nav.Link
+								<nav>
+									<a
 										href={
 											item.media?.reddit_video.fallback_url ||
 											item.url_overridden_by_dest
@@ -51,8 +50,8 @@ export default function PostsList() {
 										}}
 									>
 										<h3>{item.title}</h3>
-									</Nav.Link>
-								</Nav>
+									</a>
+								</nav>
 
 								{/* Display video or image */}
 								<div className="d-flex flex-row">
@@ -85,14 +84,12 @@ export default function PostsList() {
 										</li>
 									</ul>
 								</div>
-							</ListGroup.Item>
+							</li>
 						))
 				) : (
-					<div style={divStyling}>
-						<Spinner animation="border" variant="primary"></Spinner>
-					</div>
+					<div style={divStyling}>Loading...</div>
 				)}
-			</ListGroup>
+			</ul>
 		</>
 	);
 }
