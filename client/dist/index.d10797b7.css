@@ -57,9 +57,55 @@ h4 {
 	background-color: #fff;
 }
 
+.loading-div-dark {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 1rem;
+	height: 60px;
+	width: 60px;
+	background: #3b4252;
+	border-radius: 1rem;
+	-webkit-animation: spin 4s linear infinite;
+	-moz-animation: spin 4s linear infinite;
+	animation: spin 4s linear infinite;
+}
+
+.loading-div-light {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 1rem;
+	height: 60px;
+	width: 60px;
+	background: #fff;
+	border-radius: 1rem;
+	-webkit-animation: spin 4s linear infinite;
+	-moz-animation: spin 4s linear infinite;
+	animation: spin 4s linear infinite;
+}
+
+.loading-div-dark-2 {
+	height: 20px;
+	width: 20px;
+	background: #3b4252;
+	border-radius: 1rem;
+}
+
+.loading-div-light-2 {
+	height: 20px;
+	width: 20px;
+	background: #fff;
+	border-radius: 1rem;
+}
+
 .ul {
 	padding: 2rem;
 	min-height: 100vh;
+	width: auto;
+	height: auto;
+	display: flex;
+	justify-content: center;
 }
 
 .ul-dark {
@@ -78,6 +124,23 @@ h4 {
 	margin: 1rem;
 	margin-left: auto;
 	order: 2;
+}
+
+@-moz-keyframes spin {
+	100% {
+		-moz-transform: rotate(360deg);
+	}
+}
+@-webkit-keyframes spin {
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+@keyframes spin {
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
 }
 
 /*# sourceMappingURL=index.d10797b7.css.map */

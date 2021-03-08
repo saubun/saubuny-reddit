@@ -21,14 +21,6 @@ export default function PostsList({ isDark, setDark }: darkProps) {
 			console.error(err);
 		});
 
-	const divStyling = {
-		width: '100%',
-		height: 'auto',
-		display: 'flex',
-		justifyContent: 'center',
-		alignItems: 'center',
-	};
-
 	// Extremely messy return
 	return (
 		<>
@@ -59,14 +51,14 @@ export default function PostsList({ isDark, setDark }: darkProps) {
 										<video
 											controls
 											src={item.media.reddit_video.fallback_url}
-											style={{ height: '30%', width: 'auto' }}
+											style={{ height: '80%', width: 'auto' }}
 											className="border"
 										></video>
 									) : item.url_overridden_by_dest ? (
 										<>
 											<img
 												src={item.url_overridden_by_dest}
-												style={{ width: '30%', height: 'auto' }}
+												style={{ width: '80%', height: 'auto' }}
 												alt="No image provided"
 												className="border"
 											/>
@@ -87,7 +79,15 @@ export default function PostsList({ isDark, setDark }: darkProps) {
 							</li>
 						))
 				) : (
-					<div style={divStyling}>Loading...</div>
+					<>
+						<div className={isDark ? 'loading-div-light' : 'loading-div-dark'}>
+							<div
+								className={
+									isDark ? 'loading-div-dark-2' : 'loading-div-light-2'
+								}
+							></div>
+						</div>
+					</>
 				)}
 			</ul>
 		</>
