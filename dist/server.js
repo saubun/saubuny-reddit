@@ -9,6 +9,6 @@ const path_1 = __importDefault(require("path"));
 const app = express_1.default();
 const server = http_1.default.createServer(app);
 app.use(express_1.default.static(path_1.default.join(__dirname, '..', 'public')));
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => console.log(`Server started on port ${PORT}`));
 //# sourceMappingURL=server.js.map
