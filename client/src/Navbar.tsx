@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, BrowserRouter as Router } from 'react-router-dom';
 
 export default function NavbarTop({ isDark, setDark }: darkProps) {
 	const changeTheme = () => setDark(!isDark);
@@ -15,14 +16,22 @@ export default function NavbarTop({ isDark, setDark }: darkProps) {
 				>
 					Saubuny Reddit
 				</p>
-				<nav className="navbar-nav">
-					<a className={isDark ? 'link-light' : 'link-dark'} href="#home">
-						Home
-					</a>
-					<a className={isDark ? 'link-light' : 'link-dark'} href="#posts">
-						View Posts
-					</a>
-				</nav>
+				<Router>
+					<nav className="navbar-nav">
+						<Link
+							className={(isDark ? 'link-light' : 'link-dark') + ' link'}
+							to="/"
+						>
+							Home
+						</Link>
+						<Link
+							className={(isDark ? 'link-light' : 'link-dark') + ' link'}
+							to="/posts"
+						>
+							View Posts
+						</Link>
+					</nav>
+				</Router>
 				<div className="navbar-btns">
 					<button
 						className={
