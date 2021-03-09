@@ -66,14 +66,16 @@ body {
 		color: #000;
 	}
 
+	.navbar-nav a {
+		margin: 1rem;
+	}
+
 	.link-light {
 		color: var(--light1);
-		margin: 1rem;
 	}
 
 	.link-dark {
 		color: var(--dark3);
-		margin: 1rem;
 	}
 
 	.navbar {
@@ -213,7 +215,7 @@ body {
 }
 
 /* Smaller screens */
-@media only screen and (max-width: 1070px) {
+@media only screen and (max-width: 1440px) {
 	.navbar {
 		box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.35);
 		width: 100%;
@@ -232,23 +234,26 @@ body {
 	}
 }
 
-/* Phones  */
+/* Smol */
 @media only screen and (max-width: 700px) {
-	.navbar {
-		box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.35);
-		width: 100%;
-		height: auto;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		z-index: 100;
-		position: fixed;
-	}
-
 	.reddit-image,
 	.reddit-video {
 		width: 80%;
 		height: auto;
+	}
+}
+
+/* Phones  */
+@media only screen and (max-width: 400px) {
+	.navbar-nav {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-left: 1rem;
+	}
+
+	.navbar-nav a {
+		margin: 0.2rem;
 	}
 }
 
@@ -258,11 +263,13 @@ body {
 		-moz-transform: rotate(360deg);
 	}
 }
+
 @-webkit-keyframes spin {
 	100% {
 		-webkit-transform: rotate(360deg);
 	}
 }
+
 @keyframes spin {
 	100% {
 		-webkit-transform: rotate(360deg);
