@@ -23,11 +23,22 @@ body {
 	.button-dark {
 		background-color: var(--dark4);
 		color: var(--light3);
+		box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.35);
+		text-shadow: 0px 0px 4px #000;
 	}
 
 	.button-light {
 		background-color: var(--light3);
-		color: var(--dark4);
+		color: #000;
+		box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.35);
+	}
+
+	.button-dark:hover {
+		background-color: var(--dark3);
+	}
+
+	.button-light:hover {
+		background-color: var(--light2);
 	}
 
 	.navbar-nav {
@@ -214,10 +225,60 @@ body {
 		margin: 1rem;
 	}
 
-	.home-container {
+	.home-container-dark {
+		background-color: var(--dark1);
+		height: 100vh;
+		padding-top: 4rem;
+	}
+
+	.home-container-light {
 		background-color: white;
 		height: 100vh;
-		margin-top: 4rem;
+		padding-top: 4rem;
+	}
+
+	.flex-container {
+		display: flex;
+		justify-content: center;
+	}
+
+	.jumbotron {
+		padding: 1rem;
+		margin-top: 2rem;
+		min-width: 50%;
+		min-height: 50vh;
+		border-radius: 1rem;
+		box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.35);
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		margin: 3rem;
+		text-align: center;
+	}
+
+	.jumbotron-dark {
+		background-color: var(--dark2);
+	}
+
+	.jumbotron-light {
+		background-color: white;
+	}
+
+	.jumbotron p,
+	h1 {
+		margin: 1rem;
+		font-size: 2rem;
+	}
+
+	.jumbotron button {
+		order: 2;
+		margin-top: auto;
+		border: none;
+		padding: 0.5rem;
+		border-radius: 1rem;
+		min-width: 80%;
+		height: 20%;
+		font-size: x-large;
 	}
 }
 
@@ -247,6 +308,13 @@ body {
 	.reddit-video {
 		width: 80%;
 		height: auto;
+	}
+	.home-container {
+		padding-top: 6rem;
+	}
+
+	.ul .media-li:first-of-type {
+		margin-top: 5rem;
 	}
 }
 
