@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, BrowserRouter as Router } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function NavbarTop({ isDark, setDark }: darkProps) {
 	const changeTheme = () => setDark(!isDark);
