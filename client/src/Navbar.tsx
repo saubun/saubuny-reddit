@@ -16,22 +16,20 @@ export default function NavbarTop({ isDark, setDark }: darkProps) {
 				>
 					Saubuny Reddit
 				</p>
-				<Router>
-					<nav className="navbar-nav">
-						<Link
-							className={(isDark ? 'link-light' : 'link-dark') + ' link'}
-							to="/"
-						>
-							Home
-						</Link>
-						<Link
-							className={(isDark ? 'link-light' : 'link-dark') + ' link'}
-							to="/posts"
-						>
-							View Posts
-						</Link>
-					</nav>
-				</Router>
+				<nav className="navbar-nav">
+					<Link
+						className={(isDark ? 'link-light' : 'link-dark') + ' link'}
+						to="/"
+					>
+						Home
+					</Link>
+					<Link
+						className={(isDark ? 'link-light' : 'link-dark') + ' link'}
+						to="/posts"
+					>
+						View Posts
+					</Link>
+				</nav>
 				<div className="navbar-btns">
 					<button
 						className={

@@ -20,12 +20,6 @@ body {
 
 /* Default values for big screens */
 @media only screen {
-	.home-container {
-		background-color: white;
-		height: 100vh;
-		margin-top: 4rem;
-	}
-
 	.button-dark {
 		background-color: var(--dark4);
 		color: var(--light3);
@@ -218,6 +212,12 @@ body {
 		width: 50%;
 		height: auto;
 		margin: 1rem;
+	}
+
+	.home-container {
+		background-color: white;
+		height: 100vh;
+		margin-top: 4rem;
 	}
 }
 
