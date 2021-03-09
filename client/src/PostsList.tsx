@@ -87,12 +87,16 @@ export default function PostsList({ isDark, setDark }: darkProps) {
 						))
 				) : (
 					<>
-						<div className={isDark ? 'loading-div-light' : 'loading-div-dark'}>
+						<div className="loading-div-container">
 							<div
-								className={
-									isDark ? 'loading-div-dark-2' : 'loading-div-light-2'
-								}
-							></div>
+								className={isDark ? 'loading-div-light' : 'loading-div-dark'}
+							>
+								<div
+									className={
+										isDark ? 'loading-div-dark-2' : 'loading-div-light-2'
+									}
+								></div>
+							</div>
 						</div>
 					</>
 				)}
