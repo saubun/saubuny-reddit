@@ -23,10 +23,14 @@ export default function NavbarTop({ isDark, setDark }: darkProps) {
 						View Posts
 					</a>
 				</nav>
-				<button
-					className={(isDark ? 'button-light' : 'button-dark') + ' navbar-btn'}
-					onClick={changeTheme}
-				></button>
+				<div className="navbar-btns">
+					<button
+						className={
+							(isDark ? 'button-light' : 'button-dark') + ' navbar-btn'
+						}
+						onClick={changeTheme}
+					></button>
+				</div>
 			</div>
 		</>
 	);
