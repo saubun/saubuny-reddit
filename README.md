@@ -1,1 +1,1 @@
-# A way to view posts from r/196
+# A way to view posts from r/news with Nord Theme!

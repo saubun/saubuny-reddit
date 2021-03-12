@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const url: string = 'https://www.reddit.com/r/196.json';
+const url: string = 'https://www.reddit.com/r/news/hot.json';
 
 export default function PostsList({ isDark, setDark }: darkProps) {
 	const [posts, setPosts] = useState([]);
@@ -36,12 +36,14 @@ export default function PostsList({ isDark, setDark }: darkProps) {
 								}
 							>
 								<div className="reddit-media">
-									<h3 className={isDark ? 'text-light' : 'text-dark'}>
+									<h3
+										className={(isDark ? 'text-light' : 'text-dark') + ' title'}
+									>
 										{item.title}
 									</h3>
 
-									{/* Display video or image */}
-									{item.media?.reddit_video.fallback_url ? (
+									{/* Display video or image (Not needed for r/news) */}
+									{/* {item.media?.reddit_video.fallback_url ? (
 										<video
 											controls
 											src={item.media.reddit_video.fallback_url}
@@ -55,7 +57,7 @@ export default function PostsList({ isDark, setDark }: darkProps) {
 												className="reddit-image"
 											/>
 										</>
-									) : null}
+									) : null} */}
 
 									<div className="media-info">
 										<p className="media-link">

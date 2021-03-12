@@ -41,6 +41,10 @@ body {
 		background-color: var(--light2);
 	}
 
+	.title {
+		margin-bottom: 1rem;
+	}
+
 	.navbar-nav {
 		order: 1;
 	}

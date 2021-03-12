@@ -24,7 +24,7 @@ export default function Home({ isDark, setDark }: darkProps) {
 							Welcome
 						</h1>
 						<p className={isDark ? 'text-light' : 'text-dark'}>
-							View posts from r/196
+							View posts from r/news
 						</p>
 						<p className={isDark ? 'text-light' : 'text-dark'}>Have fun</p>
 						<button
