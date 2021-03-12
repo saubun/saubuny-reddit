@@ -1,7 +1,7 @@
 {
   "name": "saubuny-reddit",
   "version": "1.0.0",
-  "description": "A small viewer for posts on r/96",
+  "description": "A small viewer for posts on r/news",
   "main": "server.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
